@@ -22,10 +22,13 @@ import {
   Line,
 } from "./pages";
 
+import { useStateContext } from "./contexts/ContextProvider";
+
 import "./App.css";
 
 const App = () => {
-  const activeMenu = true;
+  const { activeMenu} = useStateContext();
+
   return (
     <div>
       <BrowserRouter>
@@ -34,7 +37,7 @@ const App = () => {
             <TooltipComponent content="Settings" position="Top">
               <button
                 type="button"
-                className="text-3x1 p-3 hover:drop-shadow-x1 hover:bg-light-gray text-white"
+                className="text-3xl p-3 hover:drop-shadow-xl hover:bg-light-gray text-white"
                 style={{ background: "blue", borderRadius: "50%" }}
               >
                 <FiSettings />

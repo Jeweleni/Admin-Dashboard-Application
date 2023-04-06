@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
+import { ContextProvider } from './contexts/ContextProvider';
 import reportWebVitals from './reportWebVitals';
 import { registerLicense } from '@syncfusion/ej2-base';
 
@@ -11,7 +12,9 @@ registerLicense('Mgo+DSMBaFt+QHFqVkFrWU5FaV1CX2BZfFlzR2lZeU4QCV5EYF5SRHJfQ1xmTHx
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
+    <ContextProvider>
     <App />
+    </ContextProvider>
   </React.StrictMode>
 );
 
